@@ -20,6 +20,13 @@ class SecondViewController: UIViewController {
     var delegate:GetData?
     
     
+    /// 前往TableView按鈕
+    ///
+    /// - Parameter sender: Go To TableView
+    @IBAction func GoToTableView(_ sender: UIButton) {
+        performSegue(withIdentifier: "ShowTableView", sender: nil)
+    }
+    
     @IBOutlet weak var inputTextField: UITextField!
     /// 前往第一頁
     ///
