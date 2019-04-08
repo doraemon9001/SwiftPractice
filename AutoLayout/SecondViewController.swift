@@ -15,6 +15,8 @@ protocol GetData {
 
 class SecondViewController: UIViewController {
     
+    
+    /// 傳遞資料回第一頁
     var delegate:GetData?
     
     
