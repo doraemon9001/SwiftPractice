@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import HandyJSON
 
 class ViewController: UIViewController, GetData {
     func receiveData(data: String) {
@@ -24,14 +26,29 @@ class ViewController: UIViewController, GetData {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        let parameters: Parameters = [
+            "Amount": "6666",
+            "Year": "6"
+        ]
+        
+        Alamofire.request("https://online.skl.com.tw/Insure/Variable/getEZCashAmount",
+                          method: .post,
+                          parameters: parameters,
+                          encoding: JSONEncoding.default)
+            .response{ response in
+                let str = String(data: response.data!, encoding: .utf8)
+                let ezcash:EZCashSimpleEstimate = EZCashSimpleEstimate
+                    .deserialize(from: str)!
+                if let invamt = ezcash.InvAmt {
+                    print(invamt)
+                    print(ezcash.InvYear)
+                }
+        }
         
         
         self.view.backgroundColor = .red
-        let result = Calculator(a: 3, b: 3) { (a,b) in
-            a + b
-        }
         
-        textLabel.text = "\(result)"
+        textLabel.text = "\(123)"
         
         let url = URL(string: "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1007426677%2F960x0.jpg")
         
