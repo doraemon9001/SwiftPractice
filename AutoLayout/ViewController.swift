@@ -35,14 +35,18 @@ class ViewController: UIViewController, GetData {
                           method: .post,
                           parameters: parameters,
                           encoding: JSONEncoding.default)
-            .response{ response in
-                let str = String(data: response.data!, encoding: .utf8)
-                let ezcash:EZCashSimpleEstimate = EZCashSimpleEstimate
-                    .deserialize(from: str)!
-                if let invamt = ezcash.InvAmt {
-                    print(invamt)
-                    print(ezcash.InvYear)
+            .responseString{ response in
+                if let json = response.result.value {
+                    let ezcash:EZCashSimpleEstimate = EZCashSimpleEstimate.deserialize(from: "\(json)")!
+                    debugPrint("InvAmt: \(ezcash.InvAmt!)", "InvYear: \(ezcash.InvYear)", "finish" , separator:  "|", terminator: "...")
                 }
+//                let str = String(data: response.data!, encoding: .utf8)
+//                let ezcash:EZCashSimpleEstimate = EZCashSimpleEstimate
+//                    .deserialize(from: str)!
+//                if let invamt = ezcash.InvAmt {
+//                    print(invamt)
+//                    print(ezcash.InvYear)
+//                }
         }
         
         
