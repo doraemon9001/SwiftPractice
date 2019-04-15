@@ -21,6 +21,7 @@
 		BF8DF0C622257E63002E4F1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF8DF0C422257E63002E4F1B /* LaunchScreen.storyboard */; };
 		BFB0807A225B99C10052E1E7 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB08079225B99C10052E1E7 /* TestTableViewCell.swift */; };
 		BFB0807D225B9D240052E1E7 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB0807C225B9D240052E1E7 /* TableViewModel.swift */; };
+		BFBE46F42264DB1600DAAAE0 /* Stage.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BFBE46F32264DB1600DAAAE0 /* Stage.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,7 @@
 		BF6FA0DB2264C13B00A3D161 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		BF6FA0DC2264C13B00A3D161 /* HandyJSON.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = HandyJSON.podspec; sourceTree = "<group>"; };
 		BF6FA0DD2264C13B00A3D161 /* buildFramework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildFramework.sh; sourceTree = "<group>"; };
+		BF6FA0FE2264DA3300A3D161 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = AutoLayout/Config/Config.xcconfig; sourceTree = SOURCE_ROOT; };
 		BF8DF0B822257E62002E4F1B /* AutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8DF0BB22257E62002E4F1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF8DF0BD22257E62002E4F1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +195,8 @@
 		BF8DF0C722257E63002E4F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB08079225B99C10052E1E7 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		BFB0807C225B9D240052E1E7 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		BFBE46F22264DACA00DAAAE0 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = AutoLayout/Config/Debug.xcconfig; sourceTree = "<group>"; };
+		BFBE46F32264DB1600DAAAE0 /* Stage.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Stage.xcconfig; path = AutoLayout/Config/Stage.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +227,7 @@
 		BF6FA08F2264C13B00A3D161 /* HandyJSON */ = {
 			isa = PBXGroup;
 			children = (
+				BF6FA0FE2264DA3300A3D161 /* Config.xcconfig */,
 				BF6FA0902264C13B00A3D161 /* .swift-version */,
 				BF6FA0912264C13B00A3D161 /* LICENSE */,
 				BF6FA0922264C13B00A3D161 /* CHANGELOG.md */,
@@ -350,6 +355,8 @@
 		BF8DF0AF22257E62002E4F1B = {
 			isa = PBXGroup;
 			children = (
+				BFBE46F22264DACA00DAAAE0 /* Debug.xcconfig */,
+				BFBE46F32264DB1600DAAAE0 /* Stage.xcconfig */,
 				BF6FA08F2264C13B00A3D161 /* HandyJSON */,
 				BF6FA0152264B02200A3D161 /* iOS */,
 				BF8DF0BA22257E62002E4F1B /* AutoLayout */,
@@ -518,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF8DF0C622257E63002E4F1B /* LaunchScreen.storyboard in Resources */,
+				BFBE46F42264DB1600DAAAE0 /* Stage.xcconfig in Resources */,
 				BF8DF0C322257E63002E4F1B /* Assets.xcassets in Resources */,
 				BF8DF0C122257E62002E4F1B /* Main.storyboard in Resources */,
 			);
@@ -591,8 +599,95 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BF6FA0FC2264D9A600A3D161 /* Stage */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFBE46F32264DB1600DAAAE0 /* Stage.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Stage;
+		};
+		BF6FA0FD2264D9A600A3D161 /* Stage */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFBE46F32264DB1600DAAAE0 /* Stage.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = AutoLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lance.AutoLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Stage;
+		};
 		BF8DF0C822257E63002E4F1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFBE46F22264DACA00DAAAE0 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -709,6 +804,7 @@
 		};
 		BF8DF0CB22257E63002E4F1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFBE46F22264DACA00DAAAE0 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -760,6 +856,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF8DF0C822257E63002E4F1B /* Debug */,
+				BF6FA0FC2264D9A600A3D161 /* Stage */,
 				BF8DF0C922257E63002E4F1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -769,6 +866,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF8DF0CB22257E63002E4F1B /* Debug */,
+				BF6FA0FD2264D9A600A3D161 /* Stage */,
 				BF8DF0CC22257E63002E4F1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

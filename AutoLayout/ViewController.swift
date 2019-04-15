@@ -38,7 +38,7 @@ class ViewController: UIViewController, GetData {
             .responseString{ response in
                 if let json = response.result.value {
                     let ezcash:EZCashSimpleEstimate = EZCashSimpleEstimate.deserialize(from: "\(json)")!
-                    debugPrint("InvAmt: \(ezcash.InvAmt!)", "InvYear: \(ezcash.InvYear)", "finish" , separator:  "|", terminator: "...")
+                    debugPrint("InvAmt: \(ezcash.InvAmt!)", "InvYear: \(ezcash.InvYear)", "finish" , separator:  "|", terminator: "...\r\n")
                 }
 //                let str = String(data: response.data!, encoding: .utf8)
 //                let ezcash:EZCashSimpleEstimate = EZCashSimpleEstimate
